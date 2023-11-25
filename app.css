@@ -1,0 +1,554 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font: 'Inter', sans-serif;
+  --regular-font-size: 400;
+  --medium-font: 500;
+  --semi-bold-font: 600;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+/* Typography */
+body {
+  font-family: var(--primary-font);
+}
+
+input,
+.profile-icon {
+  font-weight: var(--medium-font);
+}
+
+input {
+  font-size: 0.8125rem;
+}
+
+.profile-icon {
+  font-size: 0.75rem;
+  color: #00000066;
+}
+
+p {
+  font-size: 0.8125rem;
+  font-weight: var(--regular-font-size);
+}
+
+.trial-message p {
+  font-weight: var(--medium-font);
+}
+button {
+  font-weight: var(--semi-bold-font);
+  font-size: 0.75rem;
+}
+
+h1,
+h2,
+h3 {
+  color: #303030;
+}
+
+h1 {
+  font-weight: var(--semi-bold-font);
+  font-size: 0.875rem;
+}
+
+.progress-text,
+h3 {
+  font-size: 0.75rem;
+}
+
+h2 {
+  font-weight: var(--medium-font);
+  font-size: 0.8125rem;
+}
+
+h3 {
+  font-weight: var(--semi-bold-font);
+}
+
+.component-card p {
+  color: #616161;
+}
+
+.component-card p a {
+  text-decoration: none;
+  color: #005bd3;
+}
+
+.bold-h2 {
+  font-weight: var(--semi-bold-font);
+}
+
+#select-plan a {
+  text-decoration: none;
+  color: #323232;
+}
+
+/* Header section  */
+
+header {
+  background-color: #1c181d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75em 1em;
+  column-gap: 0.5em;
+}
+
+.search-bar,
+#search {
+  background-color: #656266;
+}
+
+.search-bar {
+  padding: 0.38em 0.5em;
+  display: flex;
+  column-gap: 0.375em;
+  border-radius: 8px;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+}
+
+#search {
+  border: none;
+  width: 100%;
+}
+
+#search::placeholder {
+  color: #b5b5b5;
+}
+
+.alert {
+  display: flex;
+  column-gap: 0.5em;
+}
+
+.bell {
+  background-color: #303030;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  align-self: center;
+}
+
+.profile-icon {
+  background-color: #36fba1;
+  padding: 0.625rem 0.313rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.bell,
+.search-icon,
+.close-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktop-logo {
+  display: none;
+}
+
+.profile-name {
+  display: none;
+}
+
+.profile-icon {
+  display: block;
+}
+
+/* Trial Message section */
+.trial-message {
+  background-color: #1a1a1a;
+  color: #e3e3e3;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  padding: 0.75em 0.5em 0.75em 1em;
+  row-gap: 1em;
+  margin-top: 1.75em;
+}
+
+#select-plan {
+  padding: 0.375em 0.75em;
+  border: none;
+  /* margin: auto; */
+  justify-self: start;
+  border-radius: 0.375em;
+  border: 1px solid #0000001a;
+  background-color: #ffffff;
+  box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
+}
+
+/* Main section */
+
+main {
+  background-color: white;
+  margin-top: 1em;
+  padding: 0.5em;
+}
+
+.body,
+.setup,
+.setup-text,
+.progress {
+  display: flex;
+}
+
+.setup-text,
+.setup {
+  flex-direction: column;
+}
+
+.body {
+  justify-content: space-between;
+  column-gap: 0.25em;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.setup {
+  row-gap: 1em;
+}
+
+.setup-text {
+  row-gap: 0.25em;
+}
+
+.progress {
+  flex-direction: row;
+  column-gap: 0.5em;
+}
+
+.progress-bar {
+  width: 72px;
+  background-color: #e3e3e3;
+  border-radius: 28px;
+  height: 5px;
+  margin: auto 0;
+}
+
+.progress-status {
+  width: 0%;
+  height: 100%;
+  background-color: #1a1a1a;
+  border-radius: 28px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Component section part */
+.task,
+.component-list,
+.component-card {
+  display: flex;
+}
+
+.list-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.task {
+  flex-direction: column;
+  column-gap: 0.125em;
+}
+
+.component-list {
+  column-gap: 0.5em;
+  align-items: start;
+  padding: 0.5em 0.5em 0.75em;
+}
+
+.component-card {
+  flex-direction: column;
+  row-gap: 1em;
+  margin-top: 1em;
+}
+
+.customize-thm-btn {
+  background-color: #404040;
+  color: #f6f3f6;
+  border-width: 1.5px 1.5px 0px 1.5px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: #ffffff33;
+  box-shadow: 0px 1px 0px 1.5px #333333;
+  padding: 0.375em 0.75em;
+  align-self: flex-start;
+}
+
+.component-bottom-part {
+  display: flex;
+  column-gap: 1em;
+  align-items: center;
+}
+
+.component-image {
+  display: none;
+}
+
+/* Design for the checkbox */
+
+/* header set to relative for the drop downs */
+header {
+  position: relative;
+}
+
+/* When alert Icon is clicked */
+.alert-container {
+  position: absolute;
+  right: 16px;
+  top: 70px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 14px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.alert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.alert-icon-pack {
+  display: flex;
+  column-gap: 1em;
+}
+
+.alert-text {
+  background-color: #f1f1f1;
+  padding: 1em;
+}
+
+.alert-container p {
+  color: #303030;
+  font-weight: var(--semi-bold-font);
+}
+
+.alert-icon p {
+  font-size: 0.875rem;
+}
+
+.alert-text p {
+  font-size: 0.8125rem;
+}
+/* When Profile icon is click */
+
+.profile-setting {
+  position: absolute;
+  right: 1em;
+  top: 4.375em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25em;
+  border: 1px solid #dbdbdb;
+  border-radius: 14px;
+  box-shadow: 0px 4px 8px 0px #0000000d;
+  padding: 0.375em; /*put it in the containers*/
+  background-color: #ffffff;
+  color: #303030;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25em;
+  padding: 6px;
+}
+
+.dc {
+  display: flex;
+  background-color: #f1f1f1;
+  padding: 0.25em 0.5em;
+  align-items: center;
+  column-gap: 0.5em;
+  border-radius: 8px;
+}
+
+.dc-icon {
+  padding: 9.63px 5.87px 10.38px 6.12px;
+  background-color: #36fba1;
+  border-radius: 5.25px;
+  border: none;
+}
+
+.profile-setting a {
+  text-decoration: none;
+  color: #303030;
+}
+.dc-icon a {
+  color: #00000066;
+  font-size: 0.66rem;
+  font-weight: var(--medium-font);
+}
+
+.dc svg {
+  margin-left: auto;
+}
+
+h4 {
+  margin-right: 8.19em;
+}
+
+.stores {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+  padding: 0.375em;
+}
+
+.stores:hover,
+.user-help ul li:hover,
+.manage:hover,
+.log-out:hover {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.stores:active,
+.user-help ul li:active,
+.manage:active,
+.log-out:active,
+.stores:focus,
+.user-help ul li:focus,
+.manage:focus,
+.log-out:focus {
+  border: 2px solid #005bd3;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.user-help {
+  border-top: 0.75px solid #e1e1e1;
+  border-bottom: 0.75px solid #e1e1e1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.user-help ul {
+  list-style-type: none;
+  padding-left: 0.375em;
+  padding-right: 0.375em;
+}
+
+.user-help ul li {
+  padding: 0.375em;
+  margin-bottom: 4px;
+  font-size: 0.813rem;
+}
+
+.user-contact {
+  display: flex;
+  flex-direction: column;
+  column-gap: 0.25em;
+  padding: 0.375em;
+}
+
+.email {
+  padding: 0.5em;
+}
+
+.email-name {
+  font-weight: var(--medium-font);
+  font-size: 0.813rem;
+}
+
+.email-address {
+  color: #616161;
+  font-size: 0.75rem;
+  font-weight: var(--regular-font-size);
+}
+
+.manage,
+.log-out {
+  padding: 6px;
+}
+
+/* Media query */
+@media (min-width: 850px) {
+  .mobile-logo {
+    display: none;
+  }
+
+  .desktop-logo {
+    display: block;
+  }
+
+  .profile-details {
+    display: flex;
+    align-items: center;
+    background-color: #303030;
+    border-radius: 8px;
+    column-gap: 0.5em;
+    padding: 2px 2px 2px 8px;
+  }
+
+  .profile-name {
+    color: #e3e3e3;
+    font-size: 0.75rem;
+    font-weight: var(--medium-font);
+    display: block;
+  }
+
+  .trial-message,
+  main {
+    /* margin: auto; */
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+  }
+
+  .trial-message {
+    grid-template-columns: 75% 20% 5%;
+    grid-template-areas: 'text button close';
+    column-gap: 8px;
+    align-items: center;
+  }
+
+  .trial-message p {
+    grid-area: text;
+  }
+
+  .close-icon {
+    grid-area: close;
+    width: 20px;
+  }
+
+  #select-plan {
+    grid-area: button;
+    justify-self: end;
+  }
+
+  .comp-disp {
+    /* just to display block */
+    display: block;
+    margin-left: auto;
+  }
+  /* Component card edit when on desktop */
+
+  /* .component-image {
+    display: block;
+  } */
+}
+
+/* Display function */
+
+.close {
+  display: none;
+}
+
+.component-property {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify</title>
+    <!-- Css link -->
+    <link rel="stylesheet" href="app.css" />
+
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Mobile logo -->
+      <div>
+        <a href="https://shopify.com"
+          ><img
+            src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
+            alt="shopify logo"
+            class="mobile-logo"
+        /></a>
+
+        <!-- Desktop logo -->
+        <a href="https://shopify.com"
+          ><img
+            src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
+            alt="shopify logo"
+            class="desktop-logo"
+        /></a>
+      </div>
+
+      <!-- Search bar -->
+      <div class="search-bar">
+        <div class="search-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="17"
+            viewBox="0 0 13 14"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.82264 10.3833C7.89957 11.0841 6.74835 11.5 5.5 11.5C2.46243 11.5 0 9.03757 0 6C0 2.96243 2.46243 0.5 5.5 0.5C8.53757 0.5 11 2.96243 11 6C11 7.24835 10.5841 8.39957 9.8833 9.32264L12.7803 12.2197C13.0732 12.5126 13.0732 12.9874 12.7803 13.2803C12.4874 13.5732 12.0126 13.5732 11.7197 13.2803L8.82264 10.3833ZM9.5 6C9.5 8.20914 7.70914 10 5.5 10C3.29086 10 1.5 8.20914 1.5 6C1.5 3.79086 3.29086 2 5.5 2C7.70914 2 9.5 3.79086 9.5 6Z"
+              fill="#B5B5B5"
+            />
+          </svg>
+        </div>
+        <input
+          type="text"
+          placeholder="Search"
+          id="search"
+          aria-label="Search"
+        />
+      </div>
+
+      <!-- Alert bell and progile Icon -->
+      <div class="alert">
+        <div class="bell" aria-label="Alerts">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 21 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.75203 14.4239L5.3061 14.1427C3.45144 13.9295 2.92542 11.4844 4.52838 10.5274L4.5933 10.4886C5.466 9.96761 6.00045 9.02609 6.00045 8.00969V7.5C6.00045 5.01472 8.01517 3 10.5005 3C12.9857 3 15.0005 5.01472 15.0005 7.5V8.00969C15.0005 9.02609 15.5349 9.96761 16.4076 10.4886L16.4725 10.5274C18.0755 11.4844 17.5495 13.9295 15.6948 14.1427L13.152 14.435V14.8C13.152 16.2912 11.9432 17.5 10.452 17.5C8.96086 17.5 7.75203 16.2912 7.75203 14.8V14.4239ZM11.652 14.5H9.25203V14.8C9.25203 15.4627 9.78929 16 10.452 16C11.1148 16 11.652 15.4627 11.652 14.8V14.5ZM8.50045 13H12.5005L15.5235 12.6525C15.953 12.6032 16.0748 12.0369 15.7036 11.8153L15.6387 11.7766C15.5591 11.7291 15.4815 11.6793 15.4057 11.6273C15.2506 11.521 15.1036 11.4055 14.9651 11.2818C14.9405 11.2598 14.9162 11.2377 14.8922 11.2152C14.0144 10.395 13.5005 9.23833 13.5005 8.00969V7.5C13.5005 5.84315 12.1573 4.5 10.5005 4.5C8.8436 4.5 7.50045 5.84315 7.50045 7.5V8.00969C7.50045 9.23833 6.98651 10.395 6.10871 11.2152C6.08469 11.2377 6.06039 11.2598 6.03583 11.2818C5.89734 11.4055 5.75029 11.521 5.59523 11.6273C5.51945 11.6793 5.44176 11.7291 5.36222 11.7766L5.29729 11.8153C4.9261 12.0369 5.0479 12.6032 5.47739 12.6525L8.50045 13Z"
+              fill="#E3E3E3"
+            />
+          </svg>
+        </div>
+
+        <!-- Profile details -->
+        <div class="profile-details">
+          <p class="profile-name">Davii Collections</p>
+          <button class="profile-icon" aria-label="User profile">DC</button>
+        </div>
+      </div>
+
+      <!-- Div for alert dropdown -->
+      <div
+        class="alert-container close"
+        aria-hidden="true"
+        aria-live="assertive"
+        role="status"
+        aria-label="Alerts about your store and account"
+      >
+        <div class="alert-icon">
+          <p>Alerts</p>
+          <div class="alert-icon-pack">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H16.25C16.6642 5.25 17 5.58579 17 6C17 6.41421 16.6642 6.75 16.25 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z"
+                fill="#616161"
+              />
+              <path
+                d="M6.75 14C6.75 13.5858 7.08579 13.25 7.5 13.25H12.5C12.9142 13.25 13.25 13.5858 13.25 14C13.25 14.4142 12.9142 14.75 12.5 14.75H7.5C7.08579 14.75 6.75 14.4142 6.75 14Z"
+                fill="#616161"
+              />
+              <path
+                d="M5.5 9.25C5.08579 9.25 4.75 9.58579 4.75 10C4.75 10.4142 5.08579 10.75 5.5 10.75H14.5C14.9142 10.75 15.25 10.4142 15.25 10C15.25 9.58579 14.9142 9.25 14.5 9.25H5.5Z"
+                fill="#616161"
+              />
+            </svg>
+
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.2803 9.03033C13.5732 8.73744 13.5732 8.26256 13.2803 7.96967C12.9874 7.67678 12.5126 7.67678 12.2197 7.96967L9.25 10.9393L8.03033 9.71967C7.73744 9.42678 7.26256 9.42678 6.96967 9.71967C6.67678 10.0126 6.67678 10.4874 6.96967 10.7803L8.71967 12.5303C9.01256 12.8232 9.48744 12.8232 9.78033 12.5303L13.2803 9.03033Z"
+                fill="#616161"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.5 10C15.5 13.0376 13.0376 15.5 10 15.5C6.96243 15.5 4.5 13.0376 4.5 10C4.5 6.96243 6.96243 4.5 10 4.5C13.0376 4.5 15.5 6.96243 15.5 10Z"
+                fill="#616161"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="alert-text">
+          <p>Alerts about your store and account will show here</p>
+        </div>
+      </div>
+
+      <!-- Div for profile icon dropdown -->
+      <div
+        class="profile-setting close"
+        aria-hidden="true"
+        aria-live="assertive"
+        role="status"
+        aria-label="Profile settings"
+      >
+        <div class="user">
+          <div class="dc">
+            <button class="dc-icon">
+              <a href="https://admin.shopify.com">DC</a>
+            </button>
+            <h4><a href="https://admin.shopify.com">Davii Collections</a></h4>
+            <svg
+              width="12"
+              height="9"
+              viewBox="0 0 12 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.3332 1L3.99984 8.33333L0.666504 5"
+                stroke="#303030"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="stores">
+            <a href="https://admin.shopify.com"
+              ><svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.257 0H3.74302C3.35944 0 2.9971 0.17611 2.76012 0.477723L0.373943 3.51468C0.131688 3.823 0 4.20375 0 4.59586V5.25C0 6.31867 0.609581 7.24497 1.5 7.70015V12.25C1.5 13.2165 2.2835 14 3.25 14H10.75C11.7165 14 12.5 13.2165 12.5 12.25V7.70015C13.3904 7.24497 14 6.31867 14 5.25V4.76879C14 4.26465 13.8307 3.77511 13.5192 3.3787L11.2399 0.477723C11.0029 0.17611 10.6406 0 10.257 0ZM10 12.5H10.75C10.8881 12.5 11 12.3881 11 12.25V8C10.212 8 9.50138 7.66855 9 7.13747C8.49861 7.66855 7.78802 8 7 8C6.21199 8 5.50138 7.66856 5 7.13747C4.49862 7.66856 3.78801 8 3 8V12.25C3 12.3881 3.11193 12.5 3.25 12.5H7V10C7 9.44772 7.44772 9 8 9H9C9.55228 9 10 9.44771 10 10V12.5ZM3 6.5H2.75C2.05964 6.5 1.5 5.94036 1.5 5.25V4.59586C1.5 4.53985 1.51881 4.48545 1.55342 4.44141L3.86453 1.5H10.1355L12.3397 4.30543C12.4436 4.43757 12.5 4.60075 12.5 4.76879V5.25C12.5 5.94036 11.9404 6.5 11.25 6.5H11C10.3096 6.5 9.75 5.94036 9.75 5.25V4.75C9.75 4.33579 9.41421 4 9 4C8.58579 4 8.25 4.33579 8.25 4.75V5.25C8.25 5.94036 7.69036 6.5 7 6.5C6.30964 6.5 5.75 5.94036 5.75 5.25V4.75C5.75 4.33579 5.41421 4 5 4C4.58579 4 4.25 4.33579 4.25 4.75V5.25C4.25 5.94036 3.69036 6.5 3 6.5Z"
+                  fill="#303030"
+                /></svg
+            ></a>
+            <p><a href="https://admin.shopify.com">All stores</a></p>
+          </div>
+        </div>
+        <div class="user-help">
+          <ul>
+            <li>
+              <a href="https://admin.shopify.com" aria-label="Help Center"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a href="https://admin.shopify.com" aria-label="Changelog"
+                >Changelog</a
+              >
+            </li>
+            <li>
+              <a href="https://admin.shopify.com" aria-label="Community forums"
+                >Community forums</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://admin.shopify.com"
+                aria-label="Hire a shopify partner"
+                >Hire a Shopify Partner</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://admin.shopify.com"
+                aria-label="Keyboard shortcuts"
+                >Keyboard Shortcuts</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="user-contact">
+          <div class="email">
+            <p class="email-name">
+              <a href="https://admin.shopify.com" aria-label="User Name"
+                >David Micheal</a
+              >
+            </p>
+            <p class="email-address">
+              <a href="https://admin.shopify.com" aria-label="Email Address"
+                >davidmicheal@gmail.com</a
+              >
+            </p>
+          </div>
+          <p class="manage">
+            <a href="https://admin.shopify.com">Manage account</a>
+          </p>
+          <p class="log-out"><a href="https://admin.shopify.com">Log out</a></p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Trial message section -->
+    <aside
+      class="trial-message"
+      aria-live="assertive"
+      aria-atomic="true"
+      role="status"
+      aria-label="Trial Message"
+    >
+      <p>Extend your trial for $1/month for 3 months on select plans.</p>
+      <div class="close-icon">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 21 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="close-btn"
+        >
+          <path
+            d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z"
+            fill="#E3E3E3"
+          />
+        </svg>
+      </div>
+      <button id="select-plan">
+        <a href="https://shopify.com/pricing">Select a plan</a>
+      </button>
+    </aside>
+
+    <!-- Main section -->
+    <!-- This section has the setup guide, and progress bar -->
+    <main>
+      <section class="body" aria-label="Setup Guide">
+        <div class="setup">
+          <!-- empty line so that I can read -->
+          <!-- The text part -->
+          <div class="setup-text">
+            <h1>Setup guide</h1>
+
+            <p>Use this personalized guide to get your store up and running.</p>
+          </div>
+
+          <!-- Progress bar div -->
+          <div class="progress" aria-label="Progress Bar">
+            <p class="progress-text">
+              <span class="progress-num">0</span> / 5 completed
+            </p>
+            <div class="progress-bar">
+              <div
+                class="progress-status"
+                role="progressbar"
+                aria-label="Progress Status"
+                aria-valuemin="0"
+                aria-valuemax="5"
+                aria-valuenow="0"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-btn" tabindex="0">
+          <img
+            id="arrow-down"
+            src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg"
+            alt="arrow down icon"
+            class="arrow-down"
+          />
+        </div>
+      </section>
+
+      <!-- Component sections -->
+      <!-- This section has the Items to click on -->
+      <section class="task close">
+        <!-- Task 1 -->
+        <div class="component-list" id="task-1">
+          <!-- Icon for the list to be checked -->
+          <div class="list-icon">
+            <input type="checkbox" id="check1" />
+          </div>
+
+          <!-- Task to complete  -->
+          <div class="task-item">
+            <h2>Customize your online store</h2>
+
+            <!-- When the text up is clicked -->
+            <div class="component-card close">
+              <p>
+                Choose a theme and add your logo, colors, and images to reflect
+                your brand.
+                <a
+                  href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                  >Learn more</a
+                >
+              </p>
+
+              <button class="customize-thm-btn">Customize theme</button>
+            </div>
+          </div>
+          <div class="component-image">
+            <img
+              src="https://crushingit.tech/hackathon-assets/customise-store.png"
+              alt="image describing store customization"
+            />
+          </div>
+        </div>
+
+        <!-- Task 2 -->
+        <div class="component-list" id="task-2">
+          <!-- Icon for the list to be checked -->
+          <div class="list-icon">
+            <input type="checkbox" id="check2" />
+          </div>
+
+          <!-- Task to complete  -->
+          <div class="task-item">
+            <h2>Add your first product</h2>
+
+            <!-- When the text up is clicked -->
+            <div class="component-card close">
+              <p>
+                Write a description, add photos, and set pricing for the
+                products you plan to sell.
+                <a
+                  href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                  >Learn more</a
+                >
+              </p>
+              <div class="component-bottom-part">
+                <button class="customize-thm-btn">Add product</button>
+                <h3>Import product</h3>
+              </div>
+            </div>
+          </div>
+          <!-- Component image that should appear when we are on desktop view -->
+          <div class="component-image">
+            <img
+              src="https://crushingit.tech/hackathon-assets/product.png"
+              alt="image describing store customization"
+            />
+          </div>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="component-list" id="task-3">
+          <!-- Icon for the list to be checked -->
+          <div class="list-icon">
+            <input type="checkbox" id="check3" />
+          </div>
+
+          <!-- Task to complete  -->
+          <div class="task-item">
+            <h2>Add a custom domain</h2>
+
+            <!-- When the text up is clicked -->
+            <div class="component-card close">
+              <p>
+                Your current domain is 222219.myshopify.com but you can add a
+                custom domain to help customers find your online store.
+                <a
+                  href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                  >Learn more</a
+                >
+              </p>
+
+              <button class="customize-thm-btn">Add domain</button>
+            </div>
+          </div>
+          <div class="component-image">
+            <img
+              src="https://crushingit.tech/hackathon-assets/website.png"
+              alt="image describing store customization"
+            />
+          </div>
+        </div>
+
+        <!-- Task 4 -->
+        <div class="component-list" id="task-4">
+          <!-- Icon for the list to be checked -->
+          <div class="list-icon">
+            <input type="checkbox" id="check4" />
+          </div>
+
+          <!-- Task to complete  -->
+          <div class="task-item">
+            <h2>Name your store</h2>
+
+            <!-- When the text up is clicked -->
+            <div class="component-card close">
+              <p>
+                Your temporary store name is currently Davii collections. The
+                store name appears in your admin and your online store.
+                <a
+                  href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                  >Learn more</a
+                >
+              </p>
+
+              <button class="customize-thm-btn">Name store</button>
+            </div>
+          </div>
+          <!-- Image to  show when on desktop view -->
+          <div class="component-image">
+            <img
+              src="https://crushingit.tech/hackathon-assets/name-store.png"
+              alt="image describing store customization"
+            />
+          </div>
+        </div>
+
+        <!-- Task 5 -->
+        <div class="component-list" id="task-5">
+          <!-- Icon for the list to be checked -->
+          <div class="list-icon">
+            <input type="checkbox" id="check5" />
+          </div>
+
+          <!-- Task to complete  -->
+          <div class="task-item">
+            <h2>Set up a payment provider</h2>
+
+            <!-- When the text up is clicked -->
+            <div class="component-card close">
+              <p>
+                Choose a payment provider to start accepting payments. You’ll
+                need to create an account with the payment provider and set it
+                up with your Shopify store.
+                <a
+                  href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                  >Learn more</a
+                >
+              </p>
+
+              <button class="customize-thm-btn">Set up payment</button>
+            </div>
+          </div>
+          <!-- Image to  show when on desktop view -->
+          <div class="component-image">
+            <img
+              src="https://crushingit.tech/hackathon-assets/payment.png"
+              alt="image describing store customization"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
