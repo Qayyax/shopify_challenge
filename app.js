@@ -25,15 +25,6 @@ closeIconBtn.addEventListener('click', () => {
   closeDiv(trialDiv);
 });
 
-// Function to toggle user help div
-// profileIcon.addEventListener('click', () => {
-  // I had to call the double function twice,
-  // but this can be fixed with an if statement
-  // closeDiv(profileSetting);
-  // closeDiv(profileSetting);
-  // profileSetting.classList.toggle('close');
-// });
-
 profileDetail.addEventListener('click', () => {
   closeDiv(profileSetting);
 });
